@@ -1,1 +1,1 @@
-# GraceofGlory-github.io
+# graceofglory-github.io
