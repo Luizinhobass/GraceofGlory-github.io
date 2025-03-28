@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+body {
+    background: url('https://images.pexels.com/photos/31309576/pexels-photo-31309576/free-photo-of-o-que-voce-esta-pensando.jpeg?auto=compress&cs=tinysrgb&w=600') no-repeat center/cover;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    white-space: nowrap;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background-image: url('imagens/Grace-LLove-09.ico');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: 01;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+    color: #666;
+}
+
+section {
+    padding: 60px 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero, .feminina, .inverno {
+    color: #FFF;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.hero h1, .feminina h1, .inverno h1, .carrinho h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.checkout h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    z-index: 1;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.gallery-item .description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #FFF;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.gallery-item .description .material {
+    display: block;
+}
+
+.gallery-item .description .price {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.carrinho {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.carrinho #cart-items {
+    margin-bottom: 20px;
+}
+
+.carrinho .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.carrinho .cart-item span {
+    font-size: 16px;
+}
+
+.carrinho .cart-item button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #ff4444;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.carrinho .cart-item button:hover {
+    background: #cc0000;
+}
+
+.carrinho .total {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.carrinho .cart-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carrinho #clear-cart-btn {
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #ff4444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrinho #clear-cart-btn:hover {
+    background: #cc0000;
+}
+
+.carrinho .checkout-button {
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #000;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.carrinho .checkout-button:hover {
+    background: #333;
+}
+
+.sobre, .contato, .checkout {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sobre h2, .contato h2, .checkout h2 {
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sobre p, .contato p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contato form, .checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contato input, .contato textarea, .checkout input, .checkout select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.contato button, .checkout button {
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #000;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+.contato button:hover, .checkout button:hover {
+    background: #333;
+}
+
+.checkout .checkout-form {
+    color: #333;
+}
+
+.checkout #checkout-items {
+    margin-bottom: 20px;
+}
+
+.checkout .total {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#payment-details input {
+    display: none;
+}
+
+#payment-details.active {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer .logo-footer {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    letter-spacing: 1px;
+}

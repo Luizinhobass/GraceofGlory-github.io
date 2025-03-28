@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Grace of Glóry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID¤cy=BRL"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Grace of Glóry</div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#colecoes">Coleções</a></li>
+                <li><a href="index.html#feminina">Feminina</a></li>
+                <li><a href="index.html#inverno">Inverno</a></li>
+                <li><a href="index.html#sobre">Sobre</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+                <li><a href="index.html#carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="checkout">
+        <h1>Finalizar Compra</h1>
+        <div id="checkout-items"></div>
+        <div class="total" id="checkout-total">Total: R$ 0,00</div>
+        <form class="checkout-form" id="checkout-form">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="text" placeholder="Endereço" required>
+            <label for="payment-method">Método de Pagamento:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="">Selecione uma opção</option>
+                <option value="credit-card">Cartão de Crédito/Débito</option>
+                <option value="pix">Pix</option>
+                <option value="paypal">PayPal</option>
+            </select>
+            <div id="payment-details" style="display: none;">
+                <div id="card-element" style="display: none;"></div>
+                <div id="pix-qr" style="display: none;"></div>
+                <div id="paypal-button-container" style="display: none;"></div>
+            </div>
+            <button type="submit">Confirmar Pedido</button>
+        </form>
+    </section>
+
+    <footer>
+        <p><span class="logo-footer">Grace of Glóry</span> © 2025. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
